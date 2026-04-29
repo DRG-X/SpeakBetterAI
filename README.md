@@ -68,8 +68,8 @@ speakbetter_ai/
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/speakbetter-ai.git
-cd speakbetter-ai
+git clone https://github.com/DRG-X/SpeakBetterAI
+cd SpeakBetterAI
 ```
 
 ### 2. Create a virtual environment
