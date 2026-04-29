@@ -1,0 +1,38 @@
+# ============================================================
+# SpeakBetter AI — requirements.txt
+# Python 3.10+ required
+# ============================================================
+
+# --- UI Framework ---
+gradio>=4.36.0,<5.0.0
+
+# --- Speech-to-Text (faster-whisper) ---
+faster-whisper>=1.0.0
+
+# --- Audio I/O ---
+soundfile>=0.12.1
+numpy>=1.24.0
+
+# --- TTS Primary: Coqui TTS ---
+# Note: TTS installs PyTorch as a dependency (~1.5GB first install).
+# Remove this line and uncomment gtts below if you want a lightweight fallback.
+TTS>=0.22.0
+
+# --- TTS Fallback: gTTS (lightweight, internet-required) ---
+# Uncomment if Coqui TTS causes issues:
+# gtts>=2.5.0
+
+# --- Audio format support (needed by TTS / soundfile) ---
+librosa>=0.10.0
+sounddevice>=0.4.6
+
+# --- Standard utility (for fuzzy matching, already stdlib) ---
+# difflib is part of Python stdlib — no install needed
+
+# ============================================================
+# HuggingFace Spaces — additional notes
+# ============================================================
+# For HF Spaces deployment, ensure your Space uses:
+#   - Runtime: Python 3.10
+#   - Hardware: CPU Basic (free tier works for "base" whisper model)
+# Large model downloads happen on first run; subsequent runs use cache.
